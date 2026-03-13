@@ -222,8 +222,9 @@ export async function generateStaticParams() {
   return Object.keys(lobsterProfiles).map(id => ({ id }))
 }
 
-export default function LobsterPage({ params }: { params: { id: string } }) {
-  const lobster = lobsterProfiles[params.id]
+export default async function LobsterPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params
+  const lobster = lobsterProfiles[id]
   
   if (!lobster) {
     notFound()
