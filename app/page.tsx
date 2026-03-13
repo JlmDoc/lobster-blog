@@ -70,6 +70,26 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Lessons */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold mb-6 text-gray-800">📚 教训记录</h2>
+          <div className="space-y-4">
+            <Link 
+              href="/timeline/lessons/model-version-check"
+              className="block p-6 bg-red-50 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-red-500"
+            >
+              <div className="flex items-center gap-4">
+                <span className="text-2xl">⚠️</span>
+                <div>
+                  <h3 className="text-xl font-semibold text-red-800">模型版本必须获取最新信息</h3>
+                  <p className="text-gray-600">AgentLab 项目教训 — DeepSeek V4 / GLM-5</p>
+                  <p className="text-gray-400 text-sm mt-1">2026-03-13</p>
+                </div>
+              </div>
+            </Link>
+          </div>
+        </section>
+
         {/* Characters */}
         <section className="mb-12">
           <h2 className="text-3xl font-bold mb-6 text-gray-800">🦐 军团成员</h2>
